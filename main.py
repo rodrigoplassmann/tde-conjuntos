@@ -1,4 +1,5 @@
 #Rodrigo Schiavinatto Plassmann
 
-with open("conjuntos1.txt", "r") as conjuntos1:
-    
+with open("3conjuntos.txt", "r") as c3:
+    result3 = c3.read()
+    print(result3)
