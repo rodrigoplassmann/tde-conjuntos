@@ -1,5 +1,8 @@
 #Rodrigo Schiavinatto Plassmann
+def ler_arquivo(nome_arquivo):
+    with open(nome_arquivo, "r") as conjuntos:
+        linhas = conjuntos.readlines()
+        for linha in linhas:
+            print(linha.strip())
 
-with open("3conjuntos.txt", "r") as c3:
-    result3 = c3.read()
-    print(result3)
+ler_arquivo("tresconjuntos.txt")
