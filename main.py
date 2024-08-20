@@ -1,16 +1,8 @@
 #Rodrigo Schiavinatto Plassmann
-def ler_arquivo(txt):
-    with open(txt, "r") as conjuntos:
-        linhas = conjuntos.readlines()
+with open('quatroconjuntos.txt', "r") as conjuntos:
+    linhas = conjuntos.readlines()
     
-    qtde_operacoes = int(linhas[0].strip())
-
-    i = 1
-    for _ in range(qtde_operacoes):
-        operacao = linhas[i].strip()
-        conj1 = set(linhas[i + 1].strip().split(','))
-        conj2 = set(linhas[i + 2].strip().split(','))
-        i += 3
+qtde_operacoes = int(linhas[0].strip())
 
 def realizar_operacoes(operacao, conj1, conj2):
     if operacao == 'U':
@@ -24,10 +16,20 @@ def realizar_operacoes(operacao, conj1, conj2):
 
 def cart(conj1, conj2):
     pares_ordenados = []
-    for i in range(conj1):
-        for j in range(conj2):
+    for i in conj1:
+        for j in conj2:
             par_ordenado = (i, j)
-    pares_ordenados.append(par_ordenado)
+            pares_ordenados.append(par_ordenado)
     return pares_ordenados
 
-ler_arquivo("quatroconjuntos.txt")
+i = 1
+for _ in range(qtde_operacoes):
+    operacao = linhas[i].strip()
+    conj1 = set(linhas[i + 1].strip().split(','))
+    conj2 = set(linhas[i + 2].strip().split(','))
+    resultado = realizar_operacoes(operacao, conj1, conj2)
+    print(f'{conj1}, {conj2}, {operacao}, {resultado}')
+    i += 3
+
+
+
