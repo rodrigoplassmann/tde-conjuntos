@@ -1,5 +1,5 @@
 #Rodrigo Schiavinatto Plassmann
-with open('tresconjuntos.txt', "r") as conjuntos:
+with open('cincoconjuntos.txt', "r") as conjuntos:
     linhas = conjuntos.readlines()
     
 qtde_operacoes = int(linhas[0].strip())
