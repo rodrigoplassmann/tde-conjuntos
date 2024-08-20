@@ -1,5 +1,5 @@
 #Rodrigo Schiavinatto Plassmann
-with open('quatroconjuntos.txt', "r") as conjuntos:
+with open('tresconjuntos.txt', "r") as conjuntos:
     linhas = conjuntos.readlines()
     
 qtde_operacoes = int(linhas[0].strip())
@@ -28,8 +28,5 @@ for _ in range(qtde_operacoes):
     conj1 = set(linhas[i + 1].strip().split(','))
     conj2 = set(linhas[i + 2].strip().split(','))
     resultado = realizar_operacoes(operacao, conj1, conj2)
-    print(f'{conj1}, {conj2}, {operacao}, {resultado}')
+    print(f'{operacao}: conjunto 1 {conj1}, conjunto 2 {conj2}. Resultado: {resultado}')
     i += 3
-
-
-
