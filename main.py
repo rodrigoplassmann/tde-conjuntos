@@ -1,5 +1,5 @@
 #Rodrigo Schiavinatto Plassmann
-with open('tresconjuntos.txt', "r") as conjuntos:
+with open('quatroconjuntos.txt', "r") as conjuntos:
     linhas = conjuntos.readlines()
     
 qtde_operacoes = int(linhas[0].strip())
@@ -28,5 +28,14 @@ for _ in range(qtde_operacoes):
     conj1 = set(linhas[i + 1].strip().split(','))
     conj2 = set(linhas[i + 2].strip().split(','))
     resultado = realizar_operacoes(operacao, conj1, conj2)
-    print(f'{operacao}: conjunto 1 {conj1}, conjunto 2 {conj2}. Resultado: {resultado}')
+    if operacao == 'U':
+        print(f'União: conjunto 1 {conj1}, conjunto 2 {conj2}. Resultado: {resultado}')
+    elif operacao == 'D':
+        print(f'Diferença: conjunto 1 {conj1}, conjunto 2 {conj2}. Resultado: {resultado}')
+    elif operacao == 'I':
+        print(f'Intersecção: conjunto 1 {conj1}, conjunto 2 {conj2}. Resultado: {resultado}')
+    elif operacao == 'C':
+        print(f'Produto cartesiano: conjunto 1 {conj1}, conjunto 2 {conj2}. Resultado: {resultado}')
+    else:
+        print("Operação inválida")
     i += 3
