@@ -4,7 +4,7 @@
 #Usando o parâmetro "r", que lê o arquivo
 #Arquivo txt armazenado como "conjuntos"
 #Utilização do método readline() para que cada linha do texto seja armazenada como elemento de uma lista, nesse caso a lista "linhas"
-with open('quatroconjuntos.txt', "r") as conjuntos:
+with open('arquivo.txt', "r") as conjuntos:
     linhas = conjuntos.readlines()
     
 #Variável demonstrando que a primeira linha do arquivo indica a quantidade de operações a serem realizadas
